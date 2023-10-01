@@ -13,7 +13,26 @@ class EstadoController extends Controller
      */
     public function index()
     {
-        //
+        
+         $estados = Estado::all();
+        //return $pacientes;
+        return view('estados.index',compact("estados")); 
+
+/* 
+        try {
+            // Recuperar todos los registros de la tabla "Estado"
+            $estados = Estado::all();
+            
+            // Pasar los datos a la vista "estados.index"
+            return view('estados.index', compact("estados"));
+        } catch (\Exception $e) {
+            // En caso de error, puedes manejarlo apropiadamente, por ejemplo, redirigiendo o mostrando un mensaje de error.
+            return redirect()->route('error')->with('error', 'Se produjo un error al cargar los estados.');
+        } */
+
+        //return view('estados.index');
+
+        
     }
 
     /**
@@ -22,6 +41,7 @@ class EstadoController extends Controller
     public function create()
     {
         //
+        return view('estados.create');
     }
 
     /**

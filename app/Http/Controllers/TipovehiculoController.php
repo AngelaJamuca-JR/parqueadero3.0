@@ -14,6 +14,7 @@ class TipovehiculoController extends Controller
     public function index()
     {
         //
+        
     }
 
     /**

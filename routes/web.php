@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+//Rutas de estados
+/* // se crea una ruta para acceder al index de estados
+Route::get('estados',[EstadoController::class,'index'])->name('estados.index'); */
+
+Route::get('estados', [EstadoController::class, 'index'])->name('estados.index');
+
+// se crea una ruta para acceder al formulario
+Route::get('estados/create',[EstadoController::class,'create'])->name('estados.create');
